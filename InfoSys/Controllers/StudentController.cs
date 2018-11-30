@@ -13,5 +13,17 @@ namespace InfoSys.Controllers
         {
             return View();
         }
+        public ActionResult AddStudent()
+        {
+            return View();
+        }
+        public ActionResult EditStudent()
+        {
+            return View();
+        }
+        public ActionResult DeleteStudent()
+        {
+            return RedirectToAction("Index");
+        }
     }
 }
