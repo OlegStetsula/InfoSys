@@ -14,10 +14,10 @@ namespace InfoSys
 
         public StudentRepository()
         {
-            _students = new List<Student>();
+            _students = new List<Student>() { new Student { Id = 1, Email = "Smith@gmail.com", FirstName = "Adam", LastName = "Smith" } };
         }
 
-        public async Task<List<Student>> Get()
+        public async Task<List<Student>> GetStudents()
         {
             return await Task.Run(() => _students);
         }
@@ -26,9 +26,9 @@ namespace InfoSys
         {
             return await Task.Run(() => _students.FirstOrDefault(f => f.Id == Id));
         }
-        public async Task<Student> AddStudent(Student student)
+        /*public async Task<Student> AddStudent(Student student)
         {
             _students.Add(student);
-        }
+        }*/
     }
 }
